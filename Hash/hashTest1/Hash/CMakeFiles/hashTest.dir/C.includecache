@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/hdf/TEST/Hash/hashTest1/Hash/Hash.c
+Hash.h
+/hdf/TEST/Hash/hashTest1/Hash/Hash.h
+
+include/Hash.h
+stdlib.h
+-
+stdio.h
+-
+limits.h
+-
+string.h
+-
+

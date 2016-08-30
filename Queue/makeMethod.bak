@@ -1,0 +1,2 @@
+//makeMothd ver 0.1
+g++ -W -Wall -O2 -o list list.cpp

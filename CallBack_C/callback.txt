@@ -1,0 +1,24 @@
+typedef void (*funcPtr)(int);
+
+// callback func
+funcPtr m_pCallback;
+
+void SetCallback(funcPtr callback)
+{
+	m_pCallback = callback;
+}
+
+void dq_error(int cam_id){	LOGE("%d dq_error", cam_id);}
+
+void test()
+{
+	m_pCallback(m_Index);
+}
+
+main()
+{
+	int i = 0;
+	setCallback(dq_error);
+
+	test();
+}

@@ -1,0 +1,1 @@
+gcc -o thread Thread.c -lpthread -D_REENTRANT -DLinux

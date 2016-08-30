@@ -1,0 +1,49 @@
+CC         = arm-cortex_a9-linux-gnueabi-gcc
+CPP        = arm-cortex_a9-linux-gnueabi-g++
+AR         = arm-cortex_a9-linux-gnueabi-ar
+RANLIB     = arm-cortex_a9-linux-gnueabi-ranlib
+AS		   = arm-cortex_a9-linux-gnueabi-gas
+TARGET     = gmp3
+
+
+SRCS     = 	gmp.c \
+	gplay.c 
+
+ASMS    = $(SRCS:.S=.o)
+OBJS    = $(SRCS:.c=.o)
+
+
+CFLAGS      = -I.
+LDFLAGS    =  -lavformat -lavcodec -lavutil -lasound -lpthread 
+
+.SUFFIXES: .c .o
+
+.c.o :
+	$(CC) -c  $(CFLAGS) -o  $@ $<
+
+.S.o :
+	$(AS) -c  $(CFLAGS) -o  $@ $<
+
+
+all : $(TARGET)
+
+#$(TARGET):	$(OBJS) $(ASMS)
+#	$(AR) cru $@ $^
+#	$(RANLIB) $@
+
+$(TARGET):	$(OBJS) $(ASMS)
+	$(CC) $(OBJS) $(LDFLAGS) -o $(TARGET)
+	#$(CC) --static  $(OBJS) $(LDFLAGS) -o $(TARGET)
+	#cp -a $(TARGET) /home/ghcstop/x-tools/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/root
+
+clean :
+	rm -rf *.o *.a *.bak *~ $(TARGET)  $(OBJS) 
+
+distclean :
+	rm -f Makefile.bak *.o *.a *~ *.so .depend
+
+dep :	depend
+
+depend :
+	$(CC) -MM $(CFLAGS) $(SRCS) 1>.depend
+	
