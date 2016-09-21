@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+
+	cout<<" binary to decimal"<<endl;
+	
+	int inputNum;
+	
+	cin>> inputNum;
+	
+	cout<<" input = "<< inputNum << endl;
+	
+	int remainNum;
+	int cntNum;
+	
+	remainNum = inputNum%2;
+	
+	cout<<" remainNum = "<< remainNum << endl;
+
+	return 0;
+}
