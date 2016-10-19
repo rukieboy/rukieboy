@@ -1,0 +1,28 @@
+package rukieboy.test.topwindowview;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	public void mStart(View v) {
+		startService(new Intent(this, AlwaysTopServiceTouch.class));
+	}
+
+	public void mStop(View v) {
+		stopService(new Intent(this, AlwaysTopServiceTouch.class));
+	}
+	
+	public void mExit(View v) {
+		System.exit(0);
+	}
+
+}
