@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/hdf/TEST/CMakeTest/cppTest/CppTest/CppTest.cc
+CppTest.h
+-
+
+include/CppTest.h
+stdlib.h
+-
+stdio.h
+-
+limits.h
+-
+string.h
+-
+iostream
+-
+functional
+-
+vector
+-
+

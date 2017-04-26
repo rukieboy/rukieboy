@@ -1,0 +1,1 @@
+/usr/lib/ccache/cc   -lpthread -ldl  -lpthread -ldl CMakeFiles/sizeTest.dir/Size.c.o  -o ../bin/sizeTest -rdynamic 

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/hdf/TEST/CMakeTest/SizeTest/Size/Size.c
+Size.h
+/hdf/TEST/CMakeTest/SizeTest/Size/Size.h
+
+include/Size.h
+stdlib.h
+-
+stdio.h
+-
+limits.h
+-
+string.h
+-
+

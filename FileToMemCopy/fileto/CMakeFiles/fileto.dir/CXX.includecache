@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/hdf/TEST/FileToMemCopy/fileto/fileto.cc
+iostream
+-
+fstream
+-
+string
+-
+cstring
+-
+

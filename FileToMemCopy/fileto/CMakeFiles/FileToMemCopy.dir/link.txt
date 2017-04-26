@@ -1,0 +1,1 @@
+/usr/lib/ccache/c++   xx -lpthread -ldl  -lpthread -ldl CMakeFiles/FileToMemCopy.dir/FileToMemCopy.cpp.o  -o ../bin/FileToMemCopy -rdynamic 
